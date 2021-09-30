@@ -1,4 +1,4 @@
-# MJDN's JavaScript
+# Playground_JavaScript
 
 자바스크립트의 정체성? -> 클라이언트 사이드 언어
 

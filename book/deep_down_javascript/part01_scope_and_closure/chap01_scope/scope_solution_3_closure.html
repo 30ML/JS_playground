@@ -21,7 +21,11 @@
 
     var i, len = 3;
     for (i = 0; i < len; i++) {
-      setDivClick(i);
+      document.getElementById("divScope" + i).addEventListener("click", (function (index) {
+        return function () {
+          alert("You clicked dev #" + index);
+        }
+      }(i)), false);
     }
   </script>
 </body>

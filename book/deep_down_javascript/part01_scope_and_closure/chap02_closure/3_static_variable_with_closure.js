@@ -2,6 +2,7 @@ var countFactory = (function () {
   var staticCount = 0;
   return function () {
     var localCount = 0;
+
     return {
       increase: function () {
         return {

@@ -1,7 +1,6 @@
 <template>
   <div class="inputBox shadow">
     <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo">
-    <!-- <button v-on:click="addTodo">add</button> -->
     <span class="addContainer">
       <i class="fas fa-plus addBtn" v-on:click="addTodo"></i>
     </span>
@@ -31,17 +30,16 @@ export default {
     }
   },
   methods: {
-    // Local Storage 저장
     addTodo() {
       if (this.newTodoItem !== '') {
-        this.$emit('addTodoItem', this.newTodoItem) // this.$emit('이벤트 이름', 인자1, 인자2, ...)
+        const text = this.newTodoItem.trim()
+        this.$store.commit('addOneItem', text)
 
         this.clearInput()
       } else {
         this.showModal = true
       }
     },
-    // 초기화
     clearInput() {
       this.newTodoItem = ''
     },

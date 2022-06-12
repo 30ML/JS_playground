@@ -3,12 +3,13 @@
     <p>name: {{ userInfo.id }}</p>
     <p>karma: {{ userInfo.karma }}</p>
     <p>created: {{ userInfo.created }}</p>
-    <p v-if="userInfo.about">{{ userInfo.about }}</p>
+    <p v-if="userInfo.about">about: {{ userInfo.about }}</p>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+
 export default {
   computed: {
     ...mapGetters({
@@ -16,7 +17,7 @@ export default {
     }),
   },
   created() {
-    const userName = this.$route.params.id
+    const userName = this.$route.params.id // Dynamic Route Matching
     this.$store.dispatch('FETCH_USER_INFO', userName)
   }
 }

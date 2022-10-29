@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"mBAEAA,QAAQC,IAAI,gBAKZD,QAAQC,IAAIC,E","sources":["webpack://virtualkeyboard/./src/js/index.js"],"sourcesContent":["import \"../css/style.css\"\n\nconsole.log('Hello, world')\n\nlet a = 1\n\nlet b = 2\nconsole.log(a + b)"],"names":["console","log","a"],"sourceRoot":""}

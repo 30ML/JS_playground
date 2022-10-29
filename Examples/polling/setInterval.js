@@ -1,0 +1,1 @@
+setInterval(() => console.log('HOHO'), 2000)
